@@ -42,4 +42,34 @@ func main() {
 	*/
 	slice2 := slice[1:5]
 	fmt.Println("Slice2 : ", slice2)
+
+	/*
+		make(TIPO, TAM, CAP) => aloca um espaço de memoria
+	*/
+
+	slice3 := make([]float32, 10, 15)
+	fmt.Println("slice3: ", slice3)
+	fmt.Println("Length: ", len(slice3))
+	fmt.Println("Capacidade: ", cap(slice3))
+
+	//Estourar o make.
+	slice3 = append(slice3, 1)
+	slice3 = append(slice3, 2)
+	slice3 = append(slice3, 3)
+	slice3 = append(slice3, 4)
+	slice3 = append(slice3, 5)
+	slice3 = append(slice3, 6)
+	fmt.Println("slice3: ", slice3)
+	fmt.Println("Length: ", len(slice3))
+	fmt.Println("Capacidade: ", cap(slice3))
+
+	//Podemos tb fazer desse jeito, sem passar a CAP
+	slice4 := make([]float32, 5)
+	fmt.Println("slice4: ", slice4)
+	fmt.Println("Length: ", len(slice4))
+	fmt.Println("Capacidade: ", cap(slice4))
+	slice4 = append(slice4, 1)
+	fmt.Println("slice4: ", slice4)
+	fmt.Println("Length: ", len(slice4))
+	fmt.Println("Capacidade: ", cap(slice4))
 }
