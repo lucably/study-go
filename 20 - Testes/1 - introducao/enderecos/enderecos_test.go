@@ -12,6 +12,7 @@ type cenarioDeTeste struct {
 // TESTE DE UNIDADE
 
 // Test{nomeFuncao} Comando para rodar => go test
+//Comando para rodar em todos os pacotes => go test ./...
 func TestTipoEndereco(t *testing.T) {
 
 	cenariosDeTeste := []cenarioDeTeste{
