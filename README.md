@@ -30,13 +30,22 @@ _Remover o Conteiner:_ docker rm -f my-container
 
 **Para conetar**  
 
-_Pelo terminal:_ docker exec -it my-container mysql -u root -p  
+_Pelo terminal Admin:_ $ docker exec -it my-container mysql -u root -p  
+_Pelo terminal User:_ $ docker exec -it my-container mysql -u usuario -p   
+
 
 **Comandos dentro do Mysql**  
+
+_Para criar um banco: CREATE DATABASE nome-banco;  
 
 _Para ver os databases_: show databases;  
 
 _Para entrar em um database_: USE name-database;  
+
+_Para criar um usuario: Precisa estar dentro de um banco-de-dados, $ CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha'; obs: esta "**localhost**" pois o servidor é local e caso dê o ERROR: Access denied for user 'golang'@'IP' (using password: YES). pega o valor do **IP** e coloque no local do **localhost**.  
+
+_Permissões para o usuario: GRANT ALL PRIVILEGES ON nome-banco.tabela-banco TO 'usuario'@'localhost'; obs: Para dar permissão para todas as tabelas basta digitar nome-banco.*  
+
 
 ### Comando dentro do database  
 
